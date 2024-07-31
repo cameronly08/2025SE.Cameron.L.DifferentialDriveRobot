@@ -13,4 +13,3 @@ private:
     int motorPin;
 };
 
-#endif

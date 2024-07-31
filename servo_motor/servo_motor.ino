@@ -1,4 +1,4 @@
-
+// for later remember to set const int for servo motor, and set values for the different speeds - fast forward, backward, slow forward, backward and stop and left and right turn.
 #include <Servo.h>
 #include "servo_motor.h"
 
@@ -71,19 +71,19 @@ private:
 DDR DDR(LEFT_SERVO_PIN, RIGHT_SERVO_PIN);
 
 void setup() {
-    robot.setSpeedSlow();
+    DDR.setSpeedSlow();
 }
 
 void loop() {
-    robot.moveForward();
+    DDR.moveForward();
     delay(1000);
-    robot.turnRight();
+    DDR.turnRight();
     delay(500);
-    robot.moveBackward();
+    DDR.moveBackward();
     delay(1000);
-    robot.turnLeft();
+    DDR.turnLeft();
     delay(500);
-    robot.stop();
+    DDR.stop();
     delay(1000);
 }
 

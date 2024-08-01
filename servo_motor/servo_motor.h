@@ -1,5 +1,5 @@
-#ifndef ServoMotor_h
-#define ServoMotor_h
+#ifndef Servo_motor_h
+#define Servo_motor_h
 
 #include <Arduino.h>
 #include <Servo.h>
@@ -31,3 +31,4 @@ class ServoMotor {
 };
 
 #endif
+

@@ -1,4 +1,4 @@
-#include "servo_motor.h"
+#include "Servo_Motor.h"
 
 ServoMotor::ServoMotor(byte leftPin, byte rightPin) {
   this->leftPin = leftPin;

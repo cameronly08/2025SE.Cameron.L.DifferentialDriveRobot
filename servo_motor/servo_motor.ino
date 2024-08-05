@@ -1,8 +1,8 @@
 #include <Servo.h>
 #include "Servo_Motor.h"
 
-#define LEFT_SERVO_PIN 9
-#define RIGHT_SERVO_PIN 10
+#define LEFT_SERVO_PIN 10
+#define RIGHT_SERVO_PIN 9
 
 ServoMotor DDR(LEFT_SERVO_PIN, RIGHT_SERVO_PIN);
 

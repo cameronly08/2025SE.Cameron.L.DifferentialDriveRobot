@@ -1,19 +1,16 @@
 
 #include "LineFinder.h"
 
-#define LEFT_LINE_PIN 9
-#define RIGHT_LINE_PIN 10
+#define LEFT_SENSOR_PIN 2
+#define RIGHT_SENSOR_PIN 3
 
-int signalPin =  3; 
-void setup()   {
-  pinMode(signalPin, INPUT); 
-  Serial.begin(9600); 
+LineFinder lineFinder(LEFT_SENSOR_PIN, RIGHT_SENSOR_PIN);
 
-void loop()
-{
-  if(HIGH == digitalRead(signalPin))
-    Serial.println("line detected");
-  else  Serial.println("no line"); 
-  delay(1000);                
+void setup() {
+  lineFinder.init(); // Initialize the line finder sensors
 }
+
+void loop() {
+ // for later -> lineFinder.followLine(DDR); // Follow the line using the motor controller
 }
+

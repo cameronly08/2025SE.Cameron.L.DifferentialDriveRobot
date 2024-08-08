@@ -10,6 +10,8 @@ void setup() {
   lineFinder.init(); // Initialize the line finder sensors
 }
 void loop() {
+  lineFinder.isLeftSensorOnLine();
+  lineFinder.isRightSensorOnLine();
  // for later -> lineFinder.followLine(DDR); // Follow the line using the motor controller
 }
 

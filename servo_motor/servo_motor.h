@@ -15,7 +15,7 @@ class ServoMotor {
     void turnRight();
     void stop();
     void setSpeedFast();
-    void setSpeedSlow();
+    void setSpeedSlow(); 
 
     static const int FAST_FORWARD = 2300;
     static const int SLOW_FORWARD = 1800;

@@ -12,9 +12,9 @@ void ServoMotor::init() {
 }
 
 void ServoMotor::setSpeed(int leftSpeed, int rightSpeed) {
-  leftMotor.writeMicroseconds(leftSpeed);
-  rightMotor.writeMicroseconds(rightSpeed);
-}
+    leftMotor.writeMicroseconds(leftSpeed);
+    rightMotor.writeMicroseconds(rightSpeed);
+  }
 
 void ServoMotor::moveForward() {
   setSpeed(SLOW_FORWARD, SLOW_FORWARD);

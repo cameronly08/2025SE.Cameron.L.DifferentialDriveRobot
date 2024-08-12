@@ -1,8 +1,8 @@
  
 #include "LineFinder.h"
 
-#define LEFT_SENSOR_PIN A0
-#define RIGHT_SENSOR_PIN A1
+#define LEFT_SENSOR_PIN A1
+#define RIGHT_SENSOR_PIN A0
 
 LineFinder lineFinder(LEFT_SENSOR_PIN, RIGHT_SENSOR_PIN);
 

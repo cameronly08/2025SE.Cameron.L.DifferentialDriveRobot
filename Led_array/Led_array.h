@@ -11,19 +11,15 @@ class LEDArray {
     void displayCross(); // Method to display a cross
 
   private:
-    ArduinoLEDMatrix matrix;
-    const uint32_t tick[4] = {
-      0x6006006,
-      0x603fc1,
-      0xf80f0060,
-      66
-    };
-    const uint32_t cross[4] = {
-      0x600f01f,
-      0x83fc0600,
-      0x60060060,
-      66
-    };
+  ArduinoLEDMatrix matrix;
+  const uint8_t tick[8] = {
+
+};
+
+
+  const uint8_t cross[8] = {
+
+
 };
 
 #endif

@@ -19,10 +19,10 @@ void loop() {
   
   if (leftOnLine || rightOnLine) {
     Serial.println("Black line found");
-    ledArray.displayTick();
+    ledArray.displayLike();
   } else {
     Serial.println("No line found");
-    ledArray.displayCross();
+    ledArray.displayDanger();
   }
   delay(500);
   

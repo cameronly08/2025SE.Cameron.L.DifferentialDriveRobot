@@ -8,8 +8,8 @@ void setup() {
 }
 
 void loop() {
-  ledArray.displayTick();
+  ledArray.displayLike();
   delay(500);
-  ledArray.displayCross();
+  ledArray.displayDanger();
   delay(500);
 }

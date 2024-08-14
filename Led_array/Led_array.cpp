@@ -8,10 +8,10 @@ void LEDArray::begin() {
   matrix.begin(); 
 }
 
-void LEDArray::displayTick() {
-  matrix.loadFrame(tick);
+void LEDArray::displayLike() {
+  matrix.loadFrame(LEDMATRIX_LIKE);
 }
 
-void LEDArray::displayCross() {
-  matrix.loadFrame(cross);
+void LEDArray::displayDanger() {
+  matrix.loadFrame(LEDMATRIX_DANGER);
 }

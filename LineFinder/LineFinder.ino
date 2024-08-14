@@ -1,14 +1,16 @@
- 
+#include "LED_Array.h"
 #include "LineFinder.h"
 
 #define LEFT_SENSOR_PIN A1
 #define RIGHT_SENSOR_PIN A0
 
 LineFinder lineFinder(LEFT_SENSOR_PIN, RIGHT_SENSOR_PIN);
+LEDArray ledArray;
 
 void setup() {
   Serial.begin(9600);
-  lineFinder.init(); // Initialize the line finder sensors
+  lineFinder.init();
+  ledArray.begin(); 
   
 }
 void loop() {
@@ -17,8 +19,10 @@ void loop() {
   
   if (leftOnLine || rightOnLine) {
     Serial.println("Black line found");
+    ledArray.displayTick();
   } else {
     Serial.println("No line found");
+    ledArray.displayCross();
   }
   delay(500);
   

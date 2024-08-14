@@ -1,7 +1,11 @@
 #include "LED_Array.h"
+#include "Arduino_LED_Matrix.h"
 
 LEDArray::LEDArray() {
-  matrix.begin();
+}
+
+void LEDArray::begin() {
+  matrix.begin(); 
 }
 
 void LEDArray::displayTick() {

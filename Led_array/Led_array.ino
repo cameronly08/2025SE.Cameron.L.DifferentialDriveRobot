@@ -1,11 +1,10 @@
-#include "LED_array.h"
+#include "LED_Array.h"
 
-ArduinoLEDMatrix matrix;
-LEDArray ledArray;
+LEDArray ledArray; 
 
 void setup() {
-Serial.begin(9600);
-matrix.begin();
+  Serial.begin(9600);
+  ledArray.begin();
 }
 
 void loop() {
@@ -13,5 +12,4 @@ void loop() {
   delay(500);
   ledArray.displayCross();
   delay(500);
-
 }

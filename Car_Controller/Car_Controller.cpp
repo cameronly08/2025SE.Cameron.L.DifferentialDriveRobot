@@ -1,10 +1,14 @@
 #include "Car_Controller.h"
 
-CarController::CarController(LineFinder& lineFinder, LEDArray& ledArray, ServoMotor& motors)
-  : lineFinder(lineFinder), ledArray(ledArray), motors(motors) {
-}
+CarController::CarController(byte leftSensorPin, byte rightSensorPin, byte leftMotorPin, byte rightMotorPin)
+  : lineFinder(leftSensorPin, rightSensorPin), Servo(leftMotorPin, rightMotorPin) {
+  }
 
 void CarController::init() {
+  lineFinder.init();
+  ledArray.begin();
+  Servo.init();
+
 }
 
 void CarController::update() {
@@ -17,7 +21,7 @@ void CarController::followLine() {
 
   if (leftOnLine && rightOnLine) {
     ledArray.displayLike();
-    motors.moveForward();
+    Servo.moveForward();
   } else if (!leftOnLine && rightOnLine) {
     ledArray.displayDanger();
     turnRight();
@@ -30,13 +34,13 @@ void CarController::followLine() {
 }
 
 void CarController::turnLeft() {
-  motors.turnLeft();
+  Servo.turnLeft();
 }
 
 void CarController::turnRight() {
-  motors.turnRight();
+  Servo.turnRight();
 }
 
 void CarController::stop() {
-  motors.stop();
+  Servo.stop();
 }

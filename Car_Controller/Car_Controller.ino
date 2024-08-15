@@ -9,16 +9,12 @@
 #define RIGHT_MOTOR_PIN 9
 
 
-LineFinder LineFinder(LEFT_SENSOR_PIN, RIGHT_SENSOR_PIN);
-LEDArray ledArray;
-ServoMotor ServoMotor(LEFT_MOTOR_PIN, RIGHT_MOTOR_PIN);
-CarController carController(LineFinder, ledArray, ServoMotor);
+
+CarController carController(LEFT_SENSOR_PIN, RIGHT_SENSOR_PIN, LEFT_MOTOR_PIN, RIGHT_MOTOR_PIN);
+
 
 void setup() {
   Serial.begin(9600);
-  LineFinder.init();
-  ledArray.begin();
-  ServoMotor.init();
   carController.init();
 }
 

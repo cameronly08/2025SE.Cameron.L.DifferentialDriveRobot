@@ -8,14 +8,14 @@
 
 class CarController {
   public:
-    CarController(LineFinder& lineFinder, LEDArray& ledArray, ServoMotor& motors);
+  CarController(byte leftSensorPin, byte rightSensorPin, byte leftMotorPin, byte rightMotorPin);
     void init(); 
-    void update(); 
+    void update();  
 
   private:
-    LineFinder& lineFinder;
-    LEDArray& ledArray;
-    ServoMotor& motors;
+    LineFinder lineFinder;
+    LEDArray ledArray;
+    ServoMotor Servo;
     void followLine();
     void turnLeft();
     void turnRight();

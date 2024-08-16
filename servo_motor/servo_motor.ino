@@ -15,6 +15,8 @@ void loop() {
   delay(2000);
   DDR.turnLeft();
   delay(1000);
+  DDR.turnRight();
+  delay(1000);
   DDR.moveBackward();
   delay(2000);
   DDR.stop();

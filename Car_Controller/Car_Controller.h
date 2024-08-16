@@ -15,7 +15,7 @@ class CarController {
   private:
     LineFinder lineFinder;
     LEDArray ledArray;
-    ServoMotor Servo;
+    ServoMotor motor;
     void followLine();
     void turnLeft();
     void turnRight();

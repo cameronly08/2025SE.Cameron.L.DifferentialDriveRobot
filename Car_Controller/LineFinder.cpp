@@ -11,25 +11,23 @@ void LineFinder::init() {
 }
 
 bool LineFinder::isLeftSensorOnLine() {
-  return analogRead(leftPin); // Return true if left sensor detects the line
+  int LeftSensorValue = analogRead(leftPin);
+  if (LeftSensorValue >= 35) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 bool LineFinder::isRightSensorOnLine() {
-  return analogRead(rightPin); // Return true if right sensor detects the line
+  int RightSensorValue = analogRead(rightPin);
+  if (RightSensorValue >= 35) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-// void LineFinder::followLine(ServoMotor& motorController) {
- // bool leftOnLine = isLeftSensorOnLine();
- // bool rightOnLine = isRightSensorOnLine(); 
 
-// if (leftOnLine && rightOnLine) {
-   // motorController.moveForward(); // Move forward if both sensors detect the line
-//  } else if (!leftOnLine && rightOnLine) {
- //   motorController.turnRight(); // Turn right if only the right sensor detects the line
-//  } else if (leftOnLine && !rightOnLine) {
-//    motorController.turnLeft(); // Turn left if only the left sensor detects the line
- // } else {
-  //  motorController.stop(); // Stop if no sensors detect the line
-  // }
-//}
+
 

@@ -23,10 +23,10 @@ void CarController::followLine() {
     ledArray.displayLike();
     motor.moveForward();
   } else if (!leftOnLine && rightOnLine) {
-    ledArray.displayDanger();
+    ledArray.displayLike();
     turnRight();
   } else if (leftOnLine && !rightOnLine) {
-    ledArray.displayDanger();
+    ledArray.displayLike();
     turnLeft();
   } else {
     ledArray.displayDanger();

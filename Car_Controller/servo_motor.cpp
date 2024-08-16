@@ -21,7 +21,7 @@ void ServoMotor::moveForward() {
 }
 
 void ServoMotor::moveBackward() {
-  setSpeed(FAST_BACKWARD, FAST_BACKWARD);
+  setSpeed(SLOW_BACKWARD, SLOW_BACKWARD);
 }
 
 void ServoMotor::turnLeft() {

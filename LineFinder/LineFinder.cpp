@@ -11,11 +11,13 @@ void LineFinder::init() {
 }
 
 bool LineFinder::isLeftSensorOnLine() {
-  return analogRead(leftPin); // Return true if left sensor detects the line
+  int() = analogRead(leftPin);
+  // greater than 35 is black
+
 }
 
 bool LineFinder::isRightSensorOnLine() {
-  return analogRead(rightPin); // Return true if right sensor detects the line
+  analogRead(rightPin);
 }
 
 // void LineFinder::followLine(ServoMotor& motorController) {

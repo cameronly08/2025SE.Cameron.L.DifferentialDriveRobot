@@ -1,5 +1,6 @@
 #include "UltrasonicSensor.h"
 #include <Arduino.h>
+#include "UltrasonicSensor.h"
 
 UltrasonicSensor::UltrasonicSensor(byte trigPin, byte echoPin) 
     : Sensor(echoPin), trigPin(trigPin) {}
@@ -9,7 +10,7 @@ void UltrasonicSensor::init() {
     pinMode(pin, INPUT);  // pin is inherited from Sensor
 }
 
-void UltrasonicSensor::readDistance() {
+float UltrasonicSensor::readDistance() {
     digitalWrite(trigPin, LOW);
     delayMicroseconds(2);
     digitalWrite(trigPin, HIGH);

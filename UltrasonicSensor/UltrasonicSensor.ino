@@ -1,16 +1,18 @@
-const int trigPin = 7;
-const int echoPin = 8; // example pins
+#include "UltrasonicSensor.h"
+const byte trigPin = 7;
+const byte echoPin = 8; // example pins
+
+UltrasonicSensor sensor(trigPin, echoPin);
 
 void setup() {
   Serial.begin(9600);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
+  sensor.init();
 }
 
 void loop() {
-  UltrasonicSensor.readDistance();
+  float distance = sensor.readDistance();
   Serial.print("Distance: ");
-  Serial.print(distanceCm);
+  Serial.print(distance);
   Serial.println(" cm");
   
   delay(1000);

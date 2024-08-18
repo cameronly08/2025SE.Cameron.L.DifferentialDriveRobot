@@ -1,6 +1,7 @@
 #ifndef ULTRASONICSENSOR_H
 #define ULTRASONICSENSOR_H
 
+#include <Arduino.h>
 #include "Sensor.h"
 
 class UltrasonicSensor : public Sensor {

@@ -13,6 +13,8 @@ void CarController::init() {
 
 void CarController::update() {
   followLine();
+
+  // add ultrasonic method here eg ::avoidObstacle
 }
 
 void CarController::followLine() {

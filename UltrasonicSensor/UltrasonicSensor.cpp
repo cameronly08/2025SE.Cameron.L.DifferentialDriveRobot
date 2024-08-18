@@ -1,20 +1,23 @@
 #include "UltrasonicSensor.h"
+#include <Arduino.h>
 
-Ultrasonic::Ultrasonic(byte Upin) {
-  this->Upin = Upin;
-}
-void Ultrasonic::init() {
-  pinMode(Upin, OUTPUT);
-  pinMode(Upin, INPUT);
-}
+UltrasonicSensor::UltrasonicSensor(byte trigPin, byte echoPin) 
+    : Sensor(echoPin), trigPin(trigPin) {}
 
-void Ultrasonic::MeasureDistance() {
-
-
+void UltrasonicSensor::init() {
+    pinMode(trigPin, OUTPUT);
+    pinMode(pin, INPUT);  // pin is inherited from Sensor
 }
 
-
-  // add a collision prevention method later 
-
+void UltrasonicSensor::readDistance() {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+    
+    long duration = pulseIn(pin, HIGH);
+    return duration * 0.034 / 2;
+}
 
 

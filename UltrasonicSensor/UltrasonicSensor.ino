@@ -1,16 +1,17 @@
-#include "UltrasonicSensor.h"
+const int trigPin = 7;
+const int echoPin = 8; // example pins
 
-Ultrasonic myUltrasonicSensor(5);
-void setup()
-{
- Serial.begin(9600);
- Ultrasonic.init();
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
 }
-void loop()
-{
-  long distance = ultrasonic.measureDistance(); // Measure distance
+
+void loop() {
+  UltrasonicSensor.readDistance();
   Serial.print("Distance: ");
-  Serial.print(distance);
+  Serial.print(distanceCm);
   Serial.println(" cm");
-  delay(500);
+  
+  delay(1000);
 }

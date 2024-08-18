@@ -1,18 +1,17 @@
-#ifndef UltrasonicSensor_H
-#define UltrasonicSensor_H
+#ifndef ULTRASONICSENSOR_H
+#define ULTRASONICSENSOR_H
 
-#include <Arduino.h>
-#include <Ultrasonic.h>
-class Ultrasonic {
-  public:
-  Ultrasonic(int Upin);
-  void init();
-  long MeasureDistance();
+#include "Sensor.h"
 
+class UltrasonicSensor : public Sensor {
+public:
+    UltrasonicSensor(byte trigPin, byte echoPin);
+    void init() override;
+    float readDistance() override;  
 
-  private:
-  int Upin;
-
+private:
+    byte trigPin;
+    byte echoPin;
 };
 
-#endif
+#endif  

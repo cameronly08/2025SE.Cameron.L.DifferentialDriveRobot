@@ -16,23 +16,23 @@ void CarController::update() {
 }
 
 void CarController::followLine() {
-  bool leftOnLine = lineFinder.isLeftSensorOnLine();
-  bool rightOnLine = lineFinder.isRightSensorOnLine();
+    bool leftOnLine = lineFinder.isLeftSensorOnLine();
+    bool rightOnLine = lineFinder.isRightSensorOnLine();
 
-  if (leftOnLine && rightOnLine) {
-    ledArray.displayLike();
-    motor.moveForward();
-  } else if (!leftOnLine && rightOnLine) {
-    ledArray.displayLike();
-    turnRight();
-  } else if (leftOnLine && !rightOnLine) {
-    ledArray.displayLike();
-    turnLeft();
-  } else {
-    ledArray.displayDanger();
-    stop();
+    if (leftOnLine && rightOnLine) {
+      ledArray.displayLike();
+      motor.moveForward();
+    } else if (!leftOnLine && rightOnLine) {
+      ledArray.displayLike();
+      turnRight();
+    } else if (leftOnLine && !rightOnLine) {
+      ledArray.displayLike();
+      turnLeft();
+    } else {
+      ledArray.displayDanger();
+      stop();
+    }
   }
-}
 
 void CarController::turnLeft() {
   motor.turnLeft();

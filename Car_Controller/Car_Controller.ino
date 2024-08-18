@@ -13,7 +13,7 @@
 CarController carController(LEFT_SENSOR_PIN, RIGHT_SENSOR_PIN, LEFT_MOTOR_PIN, RIGHT_MOTOR_PIN);
 
 
-void setup() {
+void setup() {  
   Serial.begin(9600);
   carController.init();
 }

@@ -6,13 +6,13 @@ LineFinder::LineFinder(byte leftPin, byte rightPin) {
 }
 
 void LineFinder::init() {
-  pinMode(leftPin, INPUT); // Initialize the left sensor pin as input
-  pinMode(rightPin, INPUT); // Initialize the right sensor pin as input
+  pinMode(leftPin, INPUT);
+  pinMode(rightPin, INPUT); 
 }
 
 bool LineFinder::isLeftSensorOnLine() {
   int LeftSensorValue = analogRead(leftPin);
-  if (LeftSensorValue >= 35) {
+  if (LeftSensorValue >= 30) {
     return true;
   } else {
     return false;
@@ -21,7 +21,7 @@ bool LineFinder::isLeftSensorOnLine() {
 
 bool LineFinder::isRightSensorOnLine() {
   int RightSensorValue = analogRead(rightPin);
-  if (RightSensorValue >= 35) {
+  if (RightSensorValue >= 30) {
     return true;
   } else {
     return false;

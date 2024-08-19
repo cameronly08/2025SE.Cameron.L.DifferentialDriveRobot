@@ -2,7 +2,7 @@
 #include "LED_Array.h"
 #include "Car_Controller.h"
 #include "Servo_Motor.h"
-#include "UltrasonicSensor.h"
+// #include "UltrasonicSensor.h" 
 
 #define LEFT_SENSOR_PIN A1
 #define RIGHT_SENSOR_PIN A0

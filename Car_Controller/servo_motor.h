@@ -17,10 +17,10 @@ class ServoMotor {
     void setSpeedFast();
     void setSpeedSlow(); 
 
-    static const int FAST_FORWARD = 1800;
-    static const int SLOW_FORWARD = 1600;
-    static const int FAST_BACKWARD = 900;
-    static const int SLOW_BACKWARD = 1200;
+    static const int FAST_FORWARD = 1700;
+    static const int SLOW_FORWARD = 1550;
+    static const int FAST_BACKWARD = 1100;
+    static const int SLOW_BACKWARD = 1350;
     static const int STOP = 1500;
     
   private:

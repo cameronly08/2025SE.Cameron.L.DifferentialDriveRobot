@@ -12,6 +12,8 @@ void LineFinder::init() {
 
 bool LineFinder::isLeftSensorOnLine() {
   int LeftSensorValue = analogRead(leftPin);
+//  Serial.print("Left Sensor Value: ");
+ // Serial.println(LeftSensorValue);
   if (LeftSensorValue >= 30) {
     return true;
   } else {
@@ -21,6 +23,8 @@ bool LineFinder::isLeftSensorOnLine() {
 
 bool LineFinder::isRightSensorOnLine() {
   int RightSensorValue = analogRead(rightPin);
+  //Serial.print("Right Sensor Value: ");
+ // Serial.println(RightSensorValue);
   if (RightSensorValue >= 30) {
     return true;
   } else {

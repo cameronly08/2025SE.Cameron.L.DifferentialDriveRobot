@@ -24,22 +24,22 @@ void CarController::followLine() {
 if (leftOnLine && rightOnLine) {
     ledArray.displayLike();
     motor.moveForward();
-    Serial.println("Moving Forward");
+// Serial.println("Moving Forward");
     delay(200);
 } else if (!leftOnLine && rightOnLine) {
     ledArray.displayLike();
     turnRight();
-    Serial.println("Turning Right");
+  //  Serial.println("Turning Right");
     delay(200);
 } else if (leftOnLine && !rightOnLine) {
     ledArray.displayLike();
     turnLeft();
-    Serial.println("Turning Left");
+  //  Serial.println("Turning Left");
     delay(200);
 } else {
     ledArray.displayDanger();
     stop();
-    Serial.println("Stopping");
+   // Serial.println("Stopping");
     delay(200);
 }
 

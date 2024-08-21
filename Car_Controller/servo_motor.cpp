@@ -17,23 +17,23 @@ void ServoMotor::setSpeed(int leftSpeed, int rightSpeed) {
   }
 
 void ServoMotor::moveForward() {
-  setSpeed(SLOW_FORWARD, SLOW_FORWARD);
+  setSpeed(1550, 1450);
 }
 
 void ServoMotor::moveBackward() {
-  setSpeed(SLOW_BACKWARD, SLOW_BACKWARD);
+  setSpeed(1550, 1450);
 }
 
 void ServoMotor::turnLeft() {
-  setSpeed(FAST_BACKWARD, SLOW_FORWARD);
+  setSpeed(1450, 1450);
 }
 
 void ServoMotor::turnRight() {
-  setSpeed(SLOW_FORWARD, FAST_BACKWARD);
+  setSpeed(1550, 1550);
 }
 
 void ServoMotor::stop() {
-  setSpeed(STOP, STOP);
+  setSpeed(1500, 1500);
 }
 
 void ServoMotor::setSpeedFast() {

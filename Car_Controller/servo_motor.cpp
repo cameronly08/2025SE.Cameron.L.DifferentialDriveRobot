@@ -8,7 +8,7 @@ ServoMotor::ServoMotor(byte leftPin, byte rightPin) {
 void ServoMotor::init() {
   leftMotor.attach(leftPin, 700, 2300);
   rightMotor.attach(rightPin, 700, 2300);
-  setSpeed(SLOW_FORWARD, SLOW_FORWARD);
+  stop();
 }
 
 void ServoMotor::setSpeed(int leftSpeed, int rightSpeed) {
@@ -16,30 +16,24 @@ void ServoMotor::setSpeed(int leftSpeed, int rightSpeed) {
     rightMotor.writeMicroseconds(rightSpeed);
   }
 
-void ServoMotor::moveForward() {
-  setSpeed(1550, 1450);
+void ServoMotor::moveForward(int speed) {
+    setSpeed(STOP + speed, STOP - speed);
 }
 
-void ServoMotor::moveBackward() {
-  setSpeed(1550, 1450);
+void ServoMotor::moveBackward(int speed) {
+    setSpeed(STOP - speed, STOP + speed);
 }
 
-void ServoMotor::turnLeft() {
-  setSpeed(1450, 1450);
+void ServoMotor::turnLeft(int speed) {
+    setSpeed(STOP - speed, STOP - speed);
 }
 
-void ServoMotor::turnRight() {
-  setSpeed(1550, 1550);
+void ServoMotor::turnRight(int speed) {
+    setSpeed(STOP + speed, STOP + speed);
 }
 
 void ServoMotor::stop() {
-  setSpeed(1500, 1500);
+    setSpeed(STOP, STOP);
 }
 
-void ServoMotor::setSpeedFast() {
-  setSpeed(FAST_FORWARD, FAST_FORWARD);
-}
 
-void ServoMotor::setSpeedSlow() {
-  setSpeed(SLOW_FORWARD, SLOW_FORWARD);
-}

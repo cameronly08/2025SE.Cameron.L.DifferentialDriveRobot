@@ -21,6 +21,8 @@ class CarController {
     void turnLeft();
     void turnRight();
     void stop();
+    bool lastDirectionWasLeft;
+    unsigned long lastLineTime;
 };
 
 #endif

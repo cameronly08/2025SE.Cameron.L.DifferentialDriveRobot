@@ -8,26 +8,19 @@ class ServoMotor {
   public:
     ServoMotor(byte leftPin, byte rightPin);
     void init();
-    void setSpeed(int leftSpeed, int rightSpeed);
-    void moveForward();
-    void moveBackward();
-    void turnLeft();
-    void turnRight();
+    void moveForward(int speed = 50);
+    void moveBackward(int speed = 50);
+    void turnLeft(int speed = 50);
+    void turnRight(int speed = 50);
     void stop();
-    void setSpeedFast();
-    void setSpeedSlow(); 
+    void setSpeed(int leftSpeed, int rightSpeed);
 
-    static const int FAST_FORWARD = 1700;
-    static const int SLOW_FORWARD = 1600;
-    static const int FAST_BACKWARD = 1100;
-    static const int SLOW_BACKWARD = 1400;
-    static const int STOP = 1500;
-    
   private:
     Servo leftMotor;
     Servo rightMotor;
     byte leftPin;
     byte rightPin;
+    const int STOP = 90;
 };
 
 #endif

@@ -12,7 +12,6 @@ class CarController {
   CarController(byte leftSensorPin, byte rightSensorPin, byte leftMotorPin, byte rightMotorPin); // include ultrasonic pins here 
     void init(); 
     void update();  
-
   private:
     LineFinder lineFinder;
     LEDArray ledArray;

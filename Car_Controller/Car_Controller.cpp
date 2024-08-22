@@ -25,22 +25,22 @@ if (leftOnLine && rightOnLine) {
     ledArray.displayLike();
     motor.moveForward();
 // Serial.println("Moving Forward");
-    delay(200);
+    delay(100);
 } else if (!leftOnLine && rightOnLine) {
     ledArray.displayLike();
     turnRight();
   //  Serial.println("Turning Right");
-    delay(200);
+    delay(100);
 } else if (leftOnLine && !rightOnLine) {
     ledArray.displayLike();
     turnLeft();
   //  Serial.println("Turning Left");
-    delay(200);
+    delay(100);
 } else {
     ledArray.displayDanger();
-    stop();
+    motor.moveForward();
    // Serial.println("Stopping");
-    delay(200);
+    delay(100);
 }
 
   }
@@ -56,3 +56,4 @@ void CarController::turnRight() {
 void CarController::stop() {
   motor.stop();
 }
+
